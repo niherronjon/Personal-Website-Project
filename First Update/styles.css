@@ -1,0 +1,140 @@
+/* Reset default styles */
+
+.profile-header {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* Makes it a circle */
+    object-fit: cover;
+    border: 11px solid #2d1147;
+}
+
+
+/* Base font and layout */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #2a1a1a;
+}
+
+
+/* Navbar styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cb0e0e;
+    padding: 1rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: rgb(247, 242, 242);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #15c20f;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 23rem 4rem;
+    background: linear-gradient(to right, #6a11cb, #0a0a0a);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#cta-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cta-button:hover {
+    background-color: #e7dede;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    #cta-button {
+        font-size: 0.9rem;
+    }
+}
